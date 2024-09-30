@@ -11,21 +11,6 @@ number_of_letters = int(input(f"How many letters do you want in your PW?\n"))
 number_of_numbers = int(input(f"How many numbers do you want in your PW?\n"))
 number_of_symbols = int(input(f"How many symbols do you want in your PW?\n"))
 
-# Easy solution:
-# PW = ''
-
-# for i in range(number_of_letters + 1):
-#   PW += random.choice(letters)
-
-# for j in range(number_of_numbers + 1):
-#   PW += random.choice(numbers)
-
-# for k in range(number_of_symbols + 1):
-#   PW += random.choice(symbols)
-
-
-# print(PW)
-# Hard solution:
 
 PW_list = []
 
@@ -38,9 +23,9 @@ for j in range(number_of_numbers):
 for k in range(number_of_symbols):
     PW_list += random.choice(symbols)
 
-#print(PW_list)
+
 random.shuffle(PW_list)
-#print(PW_list)
+
 
 password = ""
 for char in PW_list:
@@ -48,6 +33,6 @@ for char in PW_list:
 
 print(f"Your generated password is: {password}")
 
-# Conclusion: If I want to fill a variable with a for loop, first I have to define it outside the loop and then I can use it later.
+
 
 
